@@ -1,0 +1,560 @@
+PROGRAM NUMBER :01 
+
+ALGORITHM
+
+Step 1:start
+Step 2:read the size of array1
+Step 3:enter the elements of array1
+Step 4:read the size of second array
+Step 5:enter the elements of array2
+Step 6:initialize i=0,j=0
+Step 7:while(i<m&&j<n)
+Step 8:if(arr1[i]<arr[j][) then
+Step 9: array3[k] = array1[i] and increment i
+Step 10:else
+Step 11: array3[k] = array1[j] and increment j
+Step 12:increment k
+Step 13:if(i>=m) then
+Step 14:while(j<n)
+Step 15: array3[k] = array1[j] and increment j&k
+Step 16:if(j>=n) then
+Step 17: array3[k] = array1[i] and increment i&k
+Step 18:print the array after merging
+Step 19:stop
+
+
+PROGRAM NUMBER :02 
+
+ALGORITHM
+
+Step 1:start
+Step 2:Define a structure ‘node’ with two member val and next
+Step 3:Define a node pointer head
+Step 4:enter the choice
+Step 5:if choice==1 then do push operation
+Step 6: if choice==2 then do pop operation
+Step 7:if choice==3 then display linked list
+Step 8:if choice==4 then exit
+Step 9:stop
+
+Push operation
+Step 1:start
+Step 2:create a new node
+Step 3:if(head==NULL) then
+Step 4:ptr->val=val
+Step 5:ptr->next=NULL
+Step 6:head=ptr
+Step 7:else
+Step 8:ptr->val = val 
+Step 9:ptr->next = head
+Step 10:head=ptr 
+Step 11:print item pushed
+Step 12:stop
+
+Pop operation
+
+Step 1:start
+Step 2:if(head==NULL) then
+Step 3:print underflow
+Step 4:else
+Step 5:item = head->val 
+Step 6:ptr = hea
+Step 7:head = head->next
+Step 8:free(ptr) 
+Step 9:print Item popped 
+Step 10:stop
+
+Display linked list
+
+Step 1:start
+Step 2:if (ptr==NULL) then
+Step 3:print stack is empty 
+Step 4:else
+Step 5:while(ptr!=NULL)
+Step 6:print the elments in the stack
+Step 7:stop
+
+
+
+PROGRAM NUMBER :03 
+
+
+
+ALGORITHM
+
+step 1:start
+step 2:enter the size of circular queue and assign to n
+step 3:enter the choice
+step 4:if choice=1 then do insertion
+step 5:if choice=2 then do deletion
+step 6:if choice=3 then display circular queue
+step 8:if choice=4 then exit
+step 9:stop
+
+Insert operation
+
+step 1:start
+step 2: if ((front== 1 && rear == n) || (front == rear+ 1)) then print queue is full
+step 3:elseif(front == NULL) then front =rear=1
+step 4:else if (rear == n) then rear = 1
+step 5:else rear++
+step 6:read the element to inserted and assign to y
+step 7:queue[rear]=y
+step 8:stop
+
+Delete operation
+
+step 1:start
+step 2:if(front== NULL) then print queue is empty
+step 3:else
+step 4:delete queue[front]
+step 5:if(front==rear) then front=rear=NULL
+step 6:else if(front==n) then front=1
+step 7:else front ++
+step 8:stop
+
+Display circular queue
+
+step 1:start
+step 2:if (front>rear) then
+step 3:for (i = front; i <=n; i++)
+step 4: print queue[i])
+step 5:for (i = 1; i <= rear; i++)
+step 6:print queue[i]
+step 7:else
+step 8:for (i = front; i <= rear; i++)
+step 9:print queue[i]
+step 10:stop
+
+
+
+
+PROGRAM NO: 4
+
+
+ALGORITHM
+
+step 1:start
+step 2:define a structure node 
+step 3:initialize data and pointers *previous, *next and assign *head=NULL
+step 4:read the choice
+step 5:if choice=1 then do insert at a position
+step 6:read the value to inserted and assign to value
+step 7:select the insertion position
+step 8:if ch=1 then insert at beginning 
+step 9:if ch=2 then isert at end
+step 10:if ch=3 then insert after a node 
+step 11:if choice=2 then do select the deleting position
+step 12:if ch=1 then delete at beginning 
+step 13:if ch=2 then delete at end 
+step 14:if ch=2 then delete a specific node 
+step 15:if choice=3 then do
+step 16: if(head == NULL) then print List is Empty
+step 17: else initialize *temp=head
+step 18: while(temp -> next != NULL)
+step 19:print temp->data
+step 20:if choice=4 then exit
+step 21:stop
+
+
+
+Insert at beginning
+
+step 1:start
+step 2:create a newNode
+step 3:newNode->data=value
+step 4:newNode->previous=NULL
+step 5:if (head==NULL) then
+step 6: newNode->next=NULL
+step 7:head=newNode
+step 8:else newNode->next=NULL
+step 9:head=newNode
+step 10:print insertion success
+step 11:stop
+
+Insert at end
+
+step 1:start
+step 2:create a newNode
+step 3:newNode->data=value
+step 4:newNode->next=NULL
+step 5:if(head==NULL) then
+step 6:newNode -> previous = NULL
+step 7:head = newNode
+step 8:else
+step 9:*temp=head
+step 10:while(temp->next!=NULL)
+step 11:temp=temp -> next
+step 12:temp -> next = newNode
+step 13:newNode -> previous = temp
+step 14:print insertion success
+step 15:stop
+
+
+
+Insert after a node
+
+step 1:start
+step 2:input the data and location
+step 3:create a newNode
+step 4:newNode -> data = value
+step 5:if(head == NULL) then
+step 6:newNode -> previous = newNode -> next = NULL
+step 7:head = newNode
+step 8:else
+step 9:initialize *temp1=head,temp2
+step 10:while(temp1 -> data != location)
+step 11:if(temp1 -> next == NULL) then
+step 12:print Given node is not found in the list
+step 13:else
+step 14:temp1= temp1 -> next
+step 15: temp2 = temp1 -> next
+step 16:temp1 -> next = newNode
+step 17:newNode -> previous = temp1
+step 19:newNode -> next = temp2
+step 20:temp2 -> previous = newNode
+step 21:print insertion success
+step 22:stop
+
+Delete at beginning
+
+step 1:start
+step 2:if (head==NULL) then print list is empty and deletion is not possible
+step 3:else initialize *temp=head
+step 4:if(temp -> previous == temp -> next) then
+step 5:head=NULL
+step 6:free(temp)
+step 7:else
+step 8:head = temp -> next
+step 9:head -> previous = NULL
+step 10:free(temp)
+step 11:print deletion success
+step 12:stop
+
+Delete at end
+
+Step 1:start
+step 2:if (head==NULL) then print list is empty and deletion is not possible
+step 3:else initialize *temp=head
+step 4:if(temp -> previous == temp -> next) then
+step 5:head=NULL
+step 6:free(temp)
+step 7:else
+step 8:while(temp-> next != NULL)
+step 9:temp = temp -> next
+step 10:temp -> previous -> next = NULL
+step 11:free(temp)
+step 12:print deletion success
+step 13:stop
+
+Delete a specific node
+
+Step 1:start
+step 2:if (head==NULL) then print list is empty and deletion is not possible
+step 3:else initialize *temp=head
+step 4:while(temp -> data != delValue)
+step 5:if(temp -> next == NULL)
+step 6:print Given node is not found in the list
+step 7:else initialize temp=temp->next
+step 8: if(temp == head)
+step 9:head = NULL
+step 10:free(temp)
+step 11:else
+step 12:temp -> previous -> next = temp -> next
+step 13:free(temp) 
+step 14:print deletion success
+step 15:stop
+
+
+
+
+PROGRAM NUMBER :05 
+ 
+
+
+ALGORITHM
+
+step 1:start
+step 2:define a structure node 
+step 3:initialize value and pointers *l, *r,*t1,*t2 and assign *temp=NULL,*root=NULL
+step 4:read the choice
+step 5:if choice=1 then call insert()
+step 6:if choice=2 then call delete()
+step 7:if choice=3 then call inorder() 
+step 8:if choice=4 then call preorder() 
+step 9:if choice=5 then call postorder() 
+step 10:if choice=6 then exit
+step 11:default print “wrong choice”
+step 12:stop
+
+To create a node
+
+Step 1:start
+Step 2:read value of node and asign to data
+Step 3:temp->value=data
+Step 4:temp->i=temp->r=NULL
+Step 5:stop
+insert a node in the tree
+step 1:start
+step 2:call create()
+step 3:if(root== NULL) then root=temp
+step 4:else 
+step 5:if ((temp->value > t->value) && (t->r != NULL)) then insert newnode right of
+ the root, search(t->r)
+step 6:else if ((temp->value > t->value) && (t->r == NULL)) 
+ t->r = temp
+step 7:else if ((temp->value < t->value) && (t->l != NULL)) then insert newnode left 
+ of the root, search(t->l)
+step 8:else if ((temp->value < t->value) && (t->l == NULL))
+ t->l = temp
+step 9:stop
+
+inorder traversal of tree
+
+step 1: start
+step 2:if(root==NULL) then exit no elements in the tree
+step 3:if(t->l != NULL) then
+step 4:inorder(t->l)
+step 5:print t->value
+step 6:if (t->r != NULL) 
+step 7:inorder(t->r)
+step 8:stop
+delete a node
+step 1:start
+step 2:if (root == NULL) then exit tree is empty
+step 3:read the data to be deleted and assign to data
+step 4:t1 = root,t2 = root
+step 5:search1(root, data)
+step 6:stop
+preorder traversal of tree
+step 1:start
+step 2:if (root == NULL) then exit tree is empty
+step 3:print t->value
+step 4:if (t->l != NULL) then preorder(t->l)
+step 5:if (t->r != NULL) then preorder(t->r)
+step 6:stop
+
+postorder traversal of tree
+
+step 1:start
+step 2:if (root == NULL) then exit tree is empty
+step 3:if (t->l != NULL) then postorder(t->l)
+step 4:if (t->r != NULL) then postorder(t->r)
+step 5:print t->value
+step 6:stop
+
+
+
+PROGRAM NUMBER :06 
+
+ALGORITHM
+
+Step 1:start
+Step 2:create a structure DisjSet with variables n,parent[10],rank[10]
+Step 3:read number of elements and assign to n
+Step 4:call makeset()
+Step 5:print 1.union,2.find,3.display
+Step 6:read a choice and assign to ch
+Step 7:if ch==1 then read the element to perform union and call union(x,y)
+Step 8:if ch==2 then read the element to check if connected components 
+Step 9:if(find(x)==find(y)) then print connected components
+Step 10:else print not connected
+Step 11:ch==3 then call display()
+Step 12:stop
+
+Makeset
+
+Step 1:start
+Step 2:for i=0 to n
+Step 3:parent[i]=i;
+Step 4:rank[i]=0
+Step 5:stop
+
+Display disjoint set
+
+Step 1:start
+Step 2:for i=0 to dis.n
+Step 3:print parent
+Step 4:for i=0 to dis.n
+Step 5:print rank
+Step 6:find() of given item x then
+Step 7:if(parent[x]!=x) then
+Step 8:parent[x]=find(parent[x])
+Step 9:return parent[x]
+Step 10:stop
+
+Union of disjoint set
+
+Step 1:start
+Step 2:xset=find(x),yset=find(y)
+Step 3:if(xset==yset) then return they already in same set
+Step 4:else 
+Step 5:parent[yset]=xset then
+Step 6: rank[xset] = rank[xset] + 1
+Step 7:dis.rank[yset]=-1
+Step 8:stop
+
+
+
+
+PROGRAM NUMBER :07 
+
+
+
+ALGORITHM
+
+Step 1:start
+Step 2:print 1. Input,2.union,3.intersection,4.difference
+Step 3:read a choice and assign to ch
+Step 4:if ch==1 then call input()
+Step 5:if ch==2 then call union()
+Step 6:if ch==3 then call intersection()
+Step 7:if ch==4 then call difference()
+Step 8:else exit
+Step 9:stop
+
+Input element to bit string
+
+Step 1:start
+Step 2:read the size of first set and assign to n
+Step 3:for i=0 to n read the elements
+Step 2:read the size of second set and assign to n
+Step 3: for i=0 to n read the elements
+Step 4:print the first and second 
+Step 5:stop
+
+Display the elements in bit string
+
+Step 1:start
+Step 2:print third set for i=0 to 9
+Step 3:if c[i]=0 then print i+1
+Step 4: stop
+
+
+
+Union in bit string
+
+Step 1:start
+Step 2:for i=0 to 9 
+Step 3:if a[i]!=b[i] then c[i]=1
+Step 4:else c[i]=a[i]
+Step 5:call display()
+Step 6:stop
+
+Intersection in bit string
+
+Step 1:start
+Step 2:for i=0 to 9
+Step 3:if a[i]=b[i] then c[i]=1
+Step 4:else c[i]=0
+Step 5:display third set
+Step 6:for i=0 to 9 print c[i]
+Step 7:call display()
+Step 8:stop
+
+Difference in bit string
+
+Step 1:start
+Step 2:for i=0 to 9
+Step 3:if a[i]==1&&b[i]==1 then c[i]=1
+Step 4:else c[i]=0
+Step 5: for i=0 to 9 print c[i]
+Step 6:call display()
+Step 7:stop
+
+
+
+
+
+PROGRAM NUMBER :
+
+
+
+ALGORITHM
+
+Step 1:start
+Step 2:enter the number of vertices 
+Step 3:read the graph in matrix form
+Step 4:enter the starting vertex
+Step 5:repeat the step4&5 until the queue is empty
+Step 6:take the front item of the queue and add it to the visited list
+Step 7:create a list of that vertex adjacent node.Add the one which aren’t in the 
+Visited list to the back of the queue
+Step 8:stop 
+
+
+
+
+
+PROGRAM NUMBER :09 
+
+
+
+ALGORITHM
+
+Step 1:start
+Step 2:create a structure node with element vertex and *next
+Step 3:read number of vertices and assign to v
+Step 4:initialize adj[] with a null
+Step 5:read edges and insert them in adj[]
+Step 6:represent the edges into adjacency list
+Step 7:acquire only for the new node
+Step 8:insert the node in the new node
+Step 9:go to end of the linked list
+Step 10:keep an array visited[] to keep track of the visited vertices
+Step 11:if visited[i]=1 represent that vertex is has been visited before and the DFS function
+for some already visited node need not be called
+Step 12:repeat the step until all the vertex are visited
+Step 13:print the vertex
+Step 14:stop
+
+
+PROGRAM NUMBER :10 
+
+
+
+ALGORITHM
+
+Step 1:start
+Step 2:read the number of nodes and assign to n
+Step 3:read the adjacency matrix
+Step 4: if(cost[i][j]==0) then cost[i][j]=999
+Step 5: visited[1]=1 and print node
+Step 6:while(ne<n) then 
+Step 7:traverse adjacency matrix
+Step 8:if cost[i][j]<min and if visited[i]!=0 then
+Step 9:min=cost[i][j] ,a=u=I,b=v=j
+Step 10:if visited[u]==0 or visited[v]==0
+Step 11:print edge 
+Step 12:mincost+=min
+Step 13:visited[b]=1
+Step 14:cost[a][b]=cost[b][a]=999
+Step 15:print Minimum cost
+Step 16:stop
+
+
+
+
+PROGRAM NUMBER :11 
+
+
+ALGORITHM
+
+Step 1:start
+Step 2:read number of vertices in the graph and assign to n
+Step 3:read adjacency matrix
+Step 4:find indegree of each vertex
+Step 5:set count=0
+Step 6:add vertex v to array and increment count
+Step 7:delete all edges going from vertex v
+Step 8:if count<n then print no topological ordering possibile,graph contain cycle
+Step 9:else print array ,topological order of graph
+Step 10:stop
+
+
+
+
+
+
+
+
